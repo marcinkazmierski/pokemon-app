@@ -40,3 +40,10 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+.idea/*
