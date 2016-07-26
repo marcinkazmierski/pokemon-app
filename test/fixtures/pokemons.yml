@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  lat: 1
+  lng: 1
+  last_spawned_at: 2016-07-26 21:02:05
+
+two:
+  name: MyText
+  lat: 1
+  lng: 1
+  last_spawned_at: 2016-07-26 21:02:05

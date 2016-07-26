@@ -48,8 +48,8 @@ rake tmp:create                         # Creates tmp directories for cache...
 rails server
 rails generate controller home index
 rails generate scaffold Pokemon name:text lat:integer lng:integer last_spawned_at:datetime
-rails generate scaffold Image pokemon_id:integer url:text
-
+rails generate scaffold Image pokemon:references url:text
+rails db:migrate
 
 4)
 In your /app/views/layouts/application.html.erb lines 5 and 6, change the first parameter from application to default.
