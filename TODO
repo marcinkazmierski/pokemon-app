@@ -1,0 +1,31 @@
+
+- Nasza aplikacja przetwarza dane na temat Pokemonów.
+- Mamy w niej dwa modele Pokemon i Image.
+- Pokemon ma następujące pola:
+	- id
+	- name
+	- lat - szerokosc geogr.
+	- lng - dlugosc geogr.
+	- last_spawned_at
+- Image ma następujące pola:
+	- id
+	- pokemon_id
+	- url - po prostu link do zdjęcia.
+
+- Każdy pokemon może mieć wiele zdjęć.
+
+Zadania:
+
+- Zamodeluj powyższą aplikację w Rails
+- Wypełnij dwie powyższe tabele przykładowymi danymi (100 pokemonów, każdy ma dwa zdjęcia). Opisz w jaki sposób dodałeś te przykładowe dane.
+
+- Model Pokemon, powinien miec metody pozwalajace wyciągnąć z bazy danych:
+	- n pokemonów ułożonych w odleglosci rozsnącej od wybranego punktu np. (52.4064, 16.9252)
+	- 10 losowych pokemonów które są nie dalej niż 1 km od wybranego punktu
+	- Pokemony które nie pojawiły się już od dwóch tygodni. (last_spawned_at to pole mówiące o tym kiedy ostatni raz pokemon się pojawił)
+
+
+- Dodatkowo:
+	- Należy umożliwić pobieranie listy pokemonów w formacie JSON. Na ścieżce GET /pokemons chciałbym dostać listę 10 pokemonów które są najbliżej wybranego punktu (punkt może być na sztywno (52.4064, 16.9252)), posortowaną od najbliższego pokemona.
+	- W tym samym zapytaniu chciałbym dostać wszystkie zdjęcia zwracanych pokemonów
+

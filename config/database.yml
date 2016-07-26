@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password:
+  username: test
+  password: test
   host: localhost
 
 development:
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: pokemon-app_production
-  username: pokemon-app
-  password: <%= ENV['POKEMON-APP_DATABASE_PASSWORD'] %>
+#  username: pokemon-app
+#  password: <%= ENV['POKEMON-APP_DATABASE_PASSWORD'] %>
