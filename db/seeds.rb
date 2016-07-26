@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Image.destroy_all
+Pokemon.destroy_all
+
+# Generate pokemons with images.
+4.times do |index|
+  Pokemon.create!(name: Faker::Pokemon.name,
+                  lat: Faker::Address.latitude,
+                  lng: Faker::Address.longitude,
+                  last_spawned_at: Faker::Time.between(6.months.ago, 1.day.ago))
+  # Generate random avatars for pokemon.
+  rand(1..4).times do |index2|
+    Image.create!(url: Faker::Avatar.image("pokemon-image-#{index}-#{index2}", "100x100"),
+                  pokemon_id: Pokemon.last.id)
+  end
+end
+
+p "Created #{Pokemon.count} pokemons and #{Image.count} images."
+

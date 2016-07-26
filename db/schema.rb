@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726190947) do
+ActiveRecord::Schema.define(version: 20160726202643) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "pokemon_id"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20160726190947) do
 
   create_table "pokemons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "name",            limit: 65535
-    t.integer  "lat"
-    t.integer  "lng"
+    t.float    "lat",             limit: 24
+    t.float    "lng",             limit: 24
     t.datetime "last_spawned_at"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false

@@ -2,12 +2,12 @@
 
 one:
   name: MyText
-  lat: 1
-  lng: 1
-  last_spawned_at: 2016-07-26 21:02:05
+  lat: 1.5
+  lng: 1.5
+  last_spawned_at: 2016-07-26 22:22:15
 
 two:
   name: MyText
-  lat: 1
-  lng: 1
-  last_spawned_at: 2016-07-26 21:02:05
+  lat: 1.5
+  lng: 1.5
+  last_spawned_at: 2016-07-26 22:22:15
