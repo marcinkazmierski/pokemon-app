@@ -13,7 +13,7 @@ class Pokemon < ApplicationRecord
     @result = radius * c # in KM
   end
 
-  def self.get_by_distance(count, lat_start, lng_start) # static method
+  def self.sort_by_distance(lat_start, lng_start, count = 0) # static method
     @tab = Hash.new
     @pokemons = Pokemon.all
 

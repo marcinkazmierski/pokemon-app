@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Pokemons</h1>
-<%= debug Pokemon.get_by_distance(10, @lat_start, @lon_start) %>
+<%= debug Pokemon.sort_by_distance(  @lat_start, @lon_start, 5) %>
 <table>
   <thead>
     <tr>
