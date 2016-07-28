@@ -13,7 +13,9 @@ class Pokemon < ApplicationRecord
     @result = radius * c # in KM
   end
 
-  def self.sort_by_distance(lat_start, lng_start, count = 0) # static method
+  # Static method.
+  # Sort pokemons by distance.
+  def self.sort_by_distance(lat_start, lng_start, count = 0)
     @tab = Hash.new
     @pokemons = Pokemon.all
 
@@ -28,11 +30,21 @@ class Pokemon < ApplicationRecord
     end
   end
 
+  # Static method.
+  # Get random order by distance.
   def self.get_random_by_distance(lat_start, lng_start, distance = 1)
     @tab = Hash.new
     if distance > 0
+      @pokemons = Pokemon.all
 
+      @pokemons.each do |pokemon|
+        dist = pokemon.measure(lat_start, lng_start, pokemon.lat, pokemon.lng)
+        if dist <= distance
+          @tab[dist] = pokemon
+        end
+      end
     end
-    return @tab
+    return @tab.sort_by { rand }
   end
+  
 end

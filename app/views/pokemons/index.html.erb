@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Pokemons</h1>
-<%= debug Pokemon.sort_by_distance(  @lat_start, @lon_start, 11) %>
+
+
+<%= debug Pokemon.get_random_by_distance(  @lat_start, @lon_start, 3000) %>
 <table>
   <thead>
     <tr>
