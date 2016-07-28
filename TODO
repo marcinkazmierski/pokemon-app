@@ -17,7 +17,8 @@
 Zadania:
 
 - Zamodeluj powyższą aplikację w Rails
-- Wypełnij dwie powyższe tabele przykładowymi danymi (100 pokemonów, każdy ma dwa zdjęcia). Opisz w jaki sposób dodałeś te przykładowe dane.
+- Wypełnij dwie powyższe tabele przykładowymi danymi (100 pokemonów, każdy ma dwa zdjęcia).
+    Opisz w jaki sposób dodałeś te przykładowe dane.
 
 - Model Pokemon, powinien miec metody pozwalajace wyciągnąć z bazy danych:
 	- n pokemonów ułożonych w odleglosci rozsnącej od wybranego punktu np. (52.4064, 16.9252)

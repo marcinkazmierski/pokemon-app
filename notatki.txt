@@ -58,3 +58,11 @@ rake db:seed
 In your /app/views/layouts/application.html.erb lines 5 and 6, change the first parameter from application to default.
 
 I met the same problem, too for my situation, I don't know why, but it only happens on Windows. The parameter application works on the web server.
+
+5)
+In general...
+
+variable_name
+method_name
+ClassName
+CONSTANTNAME
