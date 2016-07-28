@@ -18,13 +18,21 @@ class Pokemon < ApplicationRecord
     @pokemons = Pokemon.all
 
     @pokemons.each do |pokemon|
-      @tab[pokemon.measure(lat_start, lng_start, pokemon.lat, pokemon.lng)] = 1 # pokemon
+      @tab[pokemon.measure(lat_start, lng_start, pokemon.lat, pokemon.lng)] = pokemon
     end
-    @tab = @tab.keys.sort
+    @tab = @tab.sort_by { |k, v| k }
     if count == 0
       return @tab
     else
       return @tab.first count
     end
+  end
+
+  def self.get_random_by_distance(lat_start, lng_start, distance = 1)
+    @tab = Hash.new
+    if distance > 0
+
+    end
+    return @tab
   end
 end
