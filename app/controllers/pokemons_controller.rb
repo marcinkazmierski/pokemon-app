@@ -4,6 +4,8 @@ class PokemonsController < ApplicationController
   # GET /pokemons
   # GET /pokemons.json
   def index
+    @lat_start = 52.4064
+    @lon_start = 16.9252
     @pokemons = Pokemon.all
   end
 
@@ -62,13 +64,13 @@ class PokemonsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pokemon
-      @pokemon = Pokemon.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_pokemon
+    @pokemon = Pokemon.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def pokemon_params
-      params.require(:pokemon).permit(:name, :lat, :lng, :last_spawned_at)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def pokemon_params
+    params.require(:pokemon).permit(:name, :lat, :lng, :last_spawned_at)
+  end
 end
