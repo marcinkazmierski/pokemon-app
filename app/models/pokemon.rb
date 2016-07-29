@@ -31,7 +31,7 @@ class Pokemon < ApplicationRecord
   end
 
   # Static method.
-  # Get random order by distance.
+  # Get random order by distance [in km].
   def self.get_random_by_distance(lat_start, lng_start, distance = 1)
     @tab = Hash.new
     if distance > 0
@@ -44,7 +44,7 @@ class Pokemon < ApplicationRecord
         end
       end
     end
-    return @tab.sort_by { rand }
+    return @tab.sort_by { rand }.first 10
   end
-  
+
 end
