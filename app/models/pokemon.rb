@@ -47,4 +47,18 @@ class Pokemon < ApplicationRecord
     return @tab.sort_by { rand }.first 10
   end
 
+  # Get pokemons that spawned before 14 days ago
+  def self.get_old_spawned
+    @tab = Array.new
+    @pokemons = Pokemon.all
+
+    @pokemons.each do |pokemon|
+      last_spawned = pokemon.last_spawned_at
+      if last_spawned <= 14.days.ago.to_date
+        @tab << pokemon
+      end
+    end
+    return @tab
+  end
+
 end
