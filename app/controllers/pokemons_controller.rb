@@ -7,7 +7,14 @@ class PokemonsController < ApplicationController
     @lat_start = 52.4064
     @lon_start = 16.9252
     # @pokemons = Pokemon.all
-    @pokemons = Pokemon.sort_by_distance(  @lat_start, @lon_start, 10)
+    @pokemons = Pokemon.sort_by_distance(@lat_start, @lon_start, 10)
+  end
+
+  # GET /pokemons-all
+  def all
+    @lat_start = 52.4064
+    @lon_start = 16.9252
+    @pokemons = Pokemon.all
   end
 
   # GET /pokemons/1

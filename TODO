@@ -28,7 +28,8 @@ Zadania:
 
 - Dodatkowo:
 	- Należy umożliwić pobieranie listy pokemonów w formacie JSON.
-	Na ścieżce GET /pokemons chciałbym dostać listę 10 pokemonów które są najbliżej wybranego punktu (punkt może być na sztywno (52.4064, 16.9252)),
+	Na ścieżce GET /pokemons chciałbym dostać listę 10 pokemonów które są najbliżej wybranego punktu
+	(punkt może być na sztywno (52.4064, 16.9252)),
 	posortowaną od najbliższego pokemona.
 	- W tym samym zapytaniu chciałbym dostać wszystkie zdjęcia zwracanych pokemonów
 
