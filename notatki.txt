@@ -66,3 +66,9 @@ variable_name
 method_name
 ClassName
 CONSTANTNAME
+
+6)
+# logger.debug "tab is: #{@poks}"
+<%= debug Pokemon.sort_by_distance(  @lat_start, @lon_start, 11) %>
+<%= debug Pokemon.get_random_by_distance(  @lat_start, @lon_start, 50000) %>
+<%= debug Pokemon.get_old_spawned %>

@@ -2,7 +2,6 @@ class Pokemon < ApplicationRecord
   has_many :images
 
   def measure(lat_start, lng_start, lat_end = self.lat, lng_end = self.lng)
-
     radius = 6378.137; # Radius of earth in KM
     distance_lat = (lat_start - lat_end) * 3.14 / 180
     distance_lng = (lng_start - lng_end) * 3.14 / 180

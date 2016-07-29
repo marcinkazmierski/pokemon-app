@@ -2,10 +2,10 @@
 
 <h1>Pokemons</h1>
 
-<%= debug Pokemon.get_old_spawned %>
 <table>
   <thead>
     <tr>
+      <th>Lp.</th>
       <th>Name</th>
       <th>Lat</th>
       <th>Lng</th>
@@ -16,8 +16,9 @@
   </thead>
 
   <tbody>
-    <% @pokemons.each do |pokemon| %>
+    <% @pokemons.each.with_index do |(k, pokemon), index| %>
       <tr>
+        <td><%= index + 1 %></td>
         <td><%= pokemon.name %></td>
         <td><%= pokemon.lat %></td>
         <td><%= pokemon.lng %></td>
