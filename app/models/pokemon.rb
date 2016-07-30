@@ -18,10 +18,13 @@ class Pokemon < ApplicationRecord
     @tab = Hash.new
     @pokemons = Pokemon.all
 
-    @pokemons.each do |pokemon|
-      @tab[pokemon.measure(lat_start, lng_start, pokemon.lat, pokemon.lng)] = pokemon
+    @pokemons.each.with_index do |pokemon, index|
+      temp = Hash.new
+      temp['distance'] = pokemon.measure(lat_start, lng_start, pokemon.lat, pokemon.lng)
+      temp['pokemon'] = pokemon
+      @tab[index] = temp
     end
-    @tab = @tab.sort_by { |k, v| k }
+    @tab = @tab.sort_by { |k, v| v['distance'] }
     if count == 0
       return @tab
     else

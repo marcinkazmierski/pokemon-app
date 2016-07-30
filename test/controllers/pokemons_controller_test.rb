@@ -43,6 +43,6 @@ class PokemonsControllerTest < ActionDispatch::IntegrationTest
       delete pokemon_url(@pokemon)
     end
 
-    assert_redirected_to pokemons_url
+    assert_redirected_to "/pokemons-all"
   end
 end

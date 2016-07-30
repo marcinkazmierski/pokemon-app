@@ -51,6 +51,7 @@ rails generate scaffold Pokemon name:text lat:float lng:float last_spawned_at:da
 rails generate scaffold Image pokemon:references url:text
 rails db:create
 rails db:migrate
+rails db:migrate RAILS_ENV=test
 rails db:rollback # rollback migrate
 
 rake db:seed
@@ -73,7 +74,15 @@ CONSTANTNAME
 <%= debug Pokemon.sort_by_distance(  @lat_start, @lon_start, 11) %>
 <%= debug Pokemon.get_random_by_distance(  @lat_start, @lon_start, 50000) %>
 <%= debug Pokemon.get_old_spawned %>
-
+    puts "XXXXXXXx #{distance}"
 7)
     @lat_start = 52.4064
     @lon_start = 16.9252
+
+8)
+https://github.com/stympy/faker#fakerpokemon
+Wykorzystałem bibliotekę faker wygenerowania testowych dancyh,
+dodatkowo biblioteka generuje losowe nazwy pokemonów co idealnie nadaje się do aplikacji.
+Aby zaimportować 100 pokemonów z 2 zdjęciami przygotowałem odpowiednio plik:
+\db\seeds.rb
+

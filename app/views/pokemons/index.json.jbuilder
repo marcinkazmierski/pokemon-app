@@ -1,12 +1,12 @@
-json.pokemons @pokemons.each do |distance, pokemon|
-  json.id pokemon.id
-  json.name pokemon.name
-  json.lat pokemon.lat
-  json.lng pokemon.lng
-  json.last_spawned_at pokemon.last_spawned_at
-  json.distance distance
+json.pokemons @pokemons.each do |k, tab|
+  json.id tab['pokemon'].id
+  json.name tab['pokemon'].name
+  json.lat tab['pokemon'].lat
+  json.lng tab['pokemon'].lng
+  json.last_spawned_at tab['pokemon'].last_spawned_at
+  json.distance tab['distance']
 
-  json.images pokemon.images.each do |image|
+  json.images tab['pokemon'].images.each do |image|
     json.url image.url
   end
 end

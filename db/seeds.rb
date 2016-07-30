@@ -9,7 +9,7 @@ Image.destroy_all
 Pokemon.destroy_all
 
 # Generate pokemons with images.
-25.times do |index|
+100.times do |index|
   Pokemon.create!(name: Faker::Pokemon.name,
                   lat: Faker::Address.latitude,
                   lng: Faker::Address.longitude,
