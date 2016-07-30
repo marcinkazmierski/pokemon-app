@@ -15,6 +15,13 @@ table td {
     margin-bottom: 30px;
 }
 
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+    .row.main-content {
+        margin-top: 90px;
+    }
+}
+
 footer {
     background-color: #eee;
 }
@@ -23,12 +30,22 @@ footer .container > p {
     margin: 28px 0;
 }
 
-a{
+a {
     color: #4078c0;
     background: transparent;
 }
-a:hover, a:focus{
+
+a:hover, a:focus {
     color: #111;
     text-decoration: underline;
     background: transparent;
+}
+
+.margins {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.text-center img {
+    display: inline-block;
 }
