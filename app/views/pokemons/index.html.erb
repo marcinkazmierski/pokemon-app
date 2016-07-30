@@ -37,31 +37,31 @@
 </div>
 
 <% @pokemons.each.with_index do |(distance, pokemon), index| %>
-<div class="row">
-  <div class="col-sm-1">
-    <p><%= index + 1 %></p>
-  </div>
-  <div class="col-sm-2">
-    <p><%= pokemon.name %></p>
-  </div>
-  <div class="col-sm-1">
-    <p><%= pokemon.lat %></p>
-  </div>
-  <div class="col-sm-1">
-    <p><%= pokemon.lng %></p>
-  </div>
-  <div class="col-sm-2">
-    <p><%= pokemon.last_spawned_at %></p>
-  </div>
-  <div class="col-sm-2">
-    <p><%= distance %> km</p>
-  </div>
-  <div class="col-sm-3">
-    <% pokemon.images.each do |image| %>
-          <img src=" <%= image.url %>" class="img-responsive pull-left">
-    <% end %>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-sm-1">
+        <p><%= index + 1 %></p>
+      </div>
+      <div class="col-sm-2">
+        <p><%= pokemon.name %></p>
+      </div>
+      <div class="col-sm-1">
+        <p><%= pokemon.lat %></p>
+      </div>
+      <div class="col-sm-1">
+        <p><%= pokemon.lng %></p>
+      </div>
+      <div class="col-sm-2">
+        <p><%= pokemon.last_spawned_at %></p>
+      </div>
+      <div class="col-sm-2">
+        <p><%= distance %> km</p>
+      </div>
+      <div class="col-sm-3">
+        <% pokemon.images.each do |image| %>
+            <img src=" <%= image.url %>" class="img-responsive pull-left">
+        <% end %>
+      </div>
+    </div>
 <% end %>
 
 
