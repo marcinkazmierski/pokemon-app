@@ -51,6 +51,7 @@ rails generate scaffold Pokemon name:text lat:float lng:float last_spawned_at:da
 rails generate scaffold Image pokemon:references url:text
 rails db:create
 rails db:migrate
+rails db:rollback # rollback migrate
 
 rake db:seed
 

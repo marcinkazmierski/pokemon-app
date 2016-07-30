@@ -2,6 +2,15 @@
 
 <h1>All pokemons</h1>
 
+<div class="row margins">
+  <div class="col-sm-12">
+    <label>
+      JSON FORMAT:
+    </label>
+    <%= link_to 'Show JSON', {:controller => "pokemons", :action => "all", :format => :json}, :class => "btn btn-success" %>
+  </div>
+</div>
+
 <table>
   <thead>
   <tr>
