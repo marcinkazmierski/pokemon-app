@@ -6,7 +6,6 @@ class PokemonsController < ApplicationController
   def index
     @lat_start = params[:lat_start].to_s.to_f
     @lon_start = params[:lon_start].to_s.to_f
-    # @pokemons = Pokemon.all
     @pokemons = Pokemon.sort_by_distance(@lat_start, @lon_start, 10)
   end
 
@@ -64,7 +63,7 @@ class PokemonsController < ApplicationController
   def destroy
     @pokemon.destroy
     respond_to do |format|
-      format.html { redirect_to pokemons_url, notice: 'Pokemon was successfully destroyed.' }
+      format.html { redirect_to "/pokemons-all", notice: 'Pokemon was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

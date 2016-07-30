@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+<% if !notice.nil? %>
+    <div class="alert alert-danger" role="alert">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <%= notice %>
+    </div>
+<% end %>
 
 <h1>All pokemons</h1>
 
