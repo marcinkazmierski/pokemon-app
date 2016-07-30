@@ -4,16 +4,16 @@ class PokemonsController < ApplicationController
   # GET /pokemons
   # GET /pokemons.json
   def index
-    @lat_start = 52.4064
-    @lon_start = 16.9252
+    @lat_start = params[:lat_start].to_s.to_f
+    @lon_start = params[:lon_start].to_s.to_f
     # @pokemons = Pokemon.all
     @pokemons = Pokemon.sort_by_distance(@lat_start, @lon_start, 10)
   end
 
   # GET /pokemons-all
   def all
-    @lat_start = 52.4064
-    @lon_start = 16.9252
+    @lat_start = params[:lat_start].to_s.to_f
+    @lon_start = params[:lon_start].to_s.to_f
     @pokemons = Pokemon.all
   end
 

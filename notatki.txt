@@ -72,3 +72,7 @@ CONSTANTNAME
 <%= debug Pokemon.sort_by_distance(  @lat_start, @lon_start, 11) %>
 <%= debug Pokemon.get_random_by_distance(  @lat_start, @lon_start, 50000) %>
 <%= debug Pokemon.get_old_spawned %>
+
+7)
+    @lat_start = 52.4064
+    @lon_start = 16.9252
