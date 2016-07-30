@@ -4,3 +4,7 @@ table{
 table td{
     padding: 4px;
 }
+
+.header-list{
+    font-weight: bold;
+}
