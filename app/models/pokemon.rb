@@ -39,10 +39,10 @@ class Pokemon < ApplicationRecord
     if distance > 0
       @pokemons = Pokemon.all
 
-      @pokemons.each do |pokemon|
+      @pokemons.each.with_index do |pokemon, index|
         dist = pokemon.measure(lat_start, lng_start, pokemon.lat, pokemon.lng)
         if dist <= distance
-          @tab[dist] = pokemon
+          @tab[index] = pokemon
         end
       end
     end

@@ -13,7 +13,7 @@ Pokemon.destroy_all
   Pokemon.create!(name: Faker::Pokemon.name,
                   lat: Faker::Address.latitude,
                   lng: Faker::Address.longitude,
-                  last_spawned_at: Faker::Time.between(6.months.ago, 1.day.ago))
+                  last_spawned_at: Faker::Time.between(3.months.ago, 1.day.ago))
   # Generate random avatars for pokemon.
   2.times do |index2|
     Image.create!(url: Faker::Avatar.image("pokemon-image-#{index}-#{index2}", "100x100"),

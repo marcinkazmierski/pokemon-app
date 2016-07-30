@@ -34,4 +34,18 @@ class PokemonTest < ActiveSupport::TestCase
     pokemons = Pokemon.sort_by_distance(1, 1)
     assert_equal Pokemon.all.count, pokemons.count
   end
+
+  test "get_random_by_distance_1" do
+    pokemons = Pokemon.get_random_by_distance(50.5, 16.0, -1)
+    assert_equal 0, pokemons.count
+  end
+
+  test "get_random_by_distance_2" do
+    pokemons = Pokemon.get_random_by_distance(50.5, 16.0, 9999999999)
+    all = Pokemon.all.count
+    if all > 10
+      all = 10
+    end
+    assert_equal all, pokemons.count
+  end
 end
