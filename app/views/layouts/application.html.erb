@@ -19,12 +19,14 @@
 </head>
 
 <body>
+<%= render :partial => 'template/header' %>
 <div class="container main-container">
-  <div class="row">
+  <div class="row main-content">
     <div class="col-sm-12">
       <%= yield %>
     </div>
   </div>
 </div>
+<%= render :partial => 'template/footer' %>
 </body>
 </html>
