@@ -11,6 +11,7 @@
     <th>Lng</th>
     <th>Last spawned at</th>
     <th>Distance to (<%= @lat_start %>, <%= @lon_start %>) in km</th>
+    <th>Images</th>
   </tr>
   </thead>
 
@@ -23,6 +24,13 @@
         <td><%= pokemon.lng %></td>
         <td><%= pokemon.last_spawned_at %></td>
         <td><%= k %> km</td>
+        <td>
+          <% pokemon.images.each do |image| %>
+              <figure>
+                <img src=" <%= image.url %>" class="img-responsive">
+              </figure>
+          <% end %>
+        </td>
       </tr>
   <% end %>
   </tbody>
