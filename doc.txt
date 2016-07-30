@@ -1,7 +1,4 @@
 1)
-
-2) rake
-
 λ rake -T
 rake about                              # List versions of all Rails framew...
 rake app:template                       # Applies the template supplied by ...
@@ -56,11 +53,6 @@ rails db:rollback # rollback migrate
 
 rake db:seed
 
-4)
-In your /app/views/layouts/application.html.erb lines 5 and 6, change the first parameter from application to default.
-
-I met the same problem, too for my situation, I don't know why, but it only happens on Windows. The parameter application works on the web server.
-
 5)
 In general...
 
@@ -74,15 +66,9 @@ CONSTANTNAME
 <%= debug Pokemon.sort_by_distance(  @lat_start, @lon_start, 11) %>
 <%= debug Pokemon.get_random_by_distance(  @lat_start, @lon_start, 50000) %>
 <%= debug Pokemon.get_old_spawned %>
-    puts "XXXXXXXx #{distance}"
+    puts "Text #{distance}"
 7)
     @lat_start = 52.4064
     @lon_start = 16.9252
 
-8)
-https://github.com/stympy/faker#fakerpokemon
-Wykorzystałem bibliotekę faker wygenerowania testowych dancyh,
-dodatkowo biblioteka generuje losowe nazwy pokemonów co idealnie nadaje się do aplikacji.
-Aby zaimportować 100 pokemonów z 2 zdjęciami przygotowałem odpowiednio plik:
-\db\seeds.rb
 
