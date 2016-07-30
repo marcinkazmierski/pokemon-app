@@ -55,16 +55,16 @@
         <p><%= tab['pokemon'].name %></p>
       </div>
       <div class="col-sm-1">
-        <p><%= tab['pokemon'].lat %></p>
+        <p><%= '%.4f' % tab['pokemon'].lat %></p>
       </div>
       <div class="col-sm-1">
-        <p><%= tab['pokemon'].lng %></p>
+        <p><%= '%.4f' % tab['pokemon'].lng %></p>
       </div>
       <div class="col-sm-2">
         <p><%= tab['pokemon'].last_spawned_at %></p>
       </div>
       <div class="col-sm-2">
-        <p><%= tab['distance'] %> km</p>
+        <p><%= '%.3f' % tab['distance'] %> km</p>
       </div>
       <div class="col-sm-3">
         <% tab['pokemon'].images.each do |image| %>

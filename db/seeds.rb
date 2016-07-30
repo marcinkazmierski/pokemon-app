@@ -11,8 +11,8 @@ Pokemon.destroy_all
 # Generate pokemons with images.
 100.times do |index|
   Pokemon.create!(name: Faker::Pokemon.name,
-                  lat: Faker::Address.latitude,
-                  lng: Faker::Address.longitude,
+                  lat: '%.4f' % Faker::Address.latitude,
+                  lng: '%.4f' % Faker::Address.longitude,
                   last_spawned_at: Faker::Time.between(3.months.ago, 1.day.ago))
   # Generate random avatars for pokemon.
   2.times do |index2|

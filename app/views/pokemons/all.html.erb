@@ -33,8 +33,8 @@
       <tr>
         <td><%= index + 1 %></td>
         <td><%= pokemon.name %></td>
-        <td><%= pokemon.lat %></td>
-        <td><%= pokemon.lng %></td>
+        <td><%= '%.4f' % pokemon.lat %></td>
+        <td><%= '%.4f' % pokemon.lng %></td>
         <td><%= pokemon.last_spawned_at %></td>
         <td><%= link_to 'Show', pokemon %></td>
         <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
