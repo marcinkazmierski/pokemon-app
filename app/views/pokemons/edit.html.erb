@@ -2,5 +2,9 @@
 
 <%= render 'form', pokemon: @pokemon %>
 
-<%= link_to 'Show', @pokemon %> |
-<%= link_to 'Back', pokemons_path %>
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Show', @pokemon %> |
+    <%= link_to 'Back', {:controller => "pokemons", :action => "all"} %>
+  </div>
+</div>

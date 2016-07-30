@@ -12,8 +12,6 @@ class PokemonsController < ApplicationController
 
   # GET /pokemons-all
   def all
-    @lat_start = params[:lat_start].to_s.to_f
-    @lon_start = params[:lon_start].to_s.to_f
     @pokemons = Pokemon.all
   end
 

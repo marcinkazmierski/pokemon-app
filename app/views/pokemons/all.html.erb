@@ -10,7 +10,6 @@
     <th>Lat</th>
     <th>Lng</th>
     <th>Last spawned at</th>
-    <th>Distance to (<%= @lat_start %>, <%= @lon_start %>) in km</th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -23,7 +22,6 @@
         <td><%= pokemon.lat %></td>
         <td><%= pokemon.lng %></td>
         <td><%= pokemon.last_spawned_at %></td>
-        <td><%= pokemon.measure(@lat_start, @lon_start) %> km</td>
         <td><%= link_to 'Show', pokemon %></td>
         <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
         <td><%= link_to 'Destroy', pokemon, method: :delete, data: {confirm: 'Are you sure?'} %></td>
